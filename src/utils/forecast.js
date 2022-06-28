@@ -11,7 +11,7 @@ const forcast=(longitude,latitude,callback)=>{
         callback('unable to find location',undefined);
     }
     else{
-        callback(undefined,"It's currently "+ res.body.current.temperature +' Fahrenheit out .there is a ' +res.body.current.feelslike+"% chance of raining");
+        callback(undefined,"It's currently "+ res.body.current.temperature +' degree out .there is a ' +res.body.current.feelslike+"% chance of raining");
     }
     
     })
