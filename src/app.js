@@ -7,7 +7,7 @@ const publicDirectoryPath=path.join(__dirname,'../public')
 console.log(publicDirectoryPath);
 app.use(express.static(publicDirectoryPath))
 
-
+const port=process.env.PORT || 3000
 const geocode=require('./utils/geocode')
 const forecast=require('./utils/forecast')
 
@@ -94,6 +94,6 @@ res.render('404',{
     errorMessage:"page not found"})
 })
 
-app.listen(3000,()=>{
-    console.log('server is upto 3000')
+app.listen(port,()=>{
+    console.log(`server is upto ${port}`)
 })
